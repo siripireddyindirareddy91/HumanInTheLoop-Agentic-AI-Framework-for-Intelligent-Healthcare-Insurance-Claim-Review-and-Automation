@@ -1,4 +1,7 @@
 /* Keep every navigation item reachable on short screens and mobile browsers. */
+.sidebar-backdrop{display:none}
+.oversight-note>.text-btn{font-size:9px;margin-top:10px}
+@media(max-width:680px){.sidebar-backdrop{display:block;position:fixed;inset:0;z-index:35;border:0;background:#1c284240;backdrop-filter:blur(2px)}}
 .sidebar{height:100vh;height:100dvh;overflow:hidden}
 .sidebar>.brand,.sidebar>.workspace-selector,.sidebar>.nav-label{flex-shrink:0}
 .sidebar nav{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;touch-action:pan-y;scrollbar-width:thin;scrollbar-color:#d7ddef transparent;padding-bottom:12px}

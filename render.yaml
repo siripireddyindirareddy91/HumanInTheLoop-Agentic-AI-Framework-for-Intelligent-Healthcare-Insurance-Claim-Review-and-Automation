@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: claimguard-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: DEMO_MODE
+        value: 'true'

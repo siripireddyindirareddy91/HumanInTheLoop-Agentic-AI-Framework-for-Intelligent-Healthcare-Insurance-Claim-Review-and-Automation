@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.vercel/
+.env
+.env.local
+__pycache__/
+*.pyc
+.pytest_cache/
+*.db
+uploads/
+.venv/
+*.log
+*.tsbuildinfo
+
+.vercel

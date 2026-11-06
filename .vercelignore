@@ -1,0 +1,8 @@
+frontend/
+.git/
+**/__pycache__/
+**/.pytest_cache/
+*.db
+backend/tests/
+docs/
+scripts/

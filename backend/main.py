@@ -196,6 +196,12 @@ class Decision(BaseModel):
     action:str
     reason:str=Field(min_length=15,max_length=5000)
     evidence:list[str]=Field(default_factory=list,max_length=30)
+    @field_validator('reason')
+    @classmethod
+    def meaningful_reason(cls,value):
+        value=value.strip()
+        if len(value)<15: raise ValueError('Provide at least 15 non-padding characters explaining your decision')
+        return value
 @app.post('/api/reviews/{cid}/decision')
 @app.post('/api/reviews/{cid}/request-information')
 @app.post('/api/reviews/{cid}/escalate')
